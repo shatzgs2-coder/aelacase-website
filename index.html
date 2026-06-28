@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>aelacase — Premium Phone Cases | Style Meets Protection</title>
+<meta name="description" content="aelacase — Premium phone cases designed in Germany. 33 unique styles. Free shipping in Germany from €39, EU from €69. 15-day pre-order.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+
+:root {
+  --bg: #0a0a0a;
+  --bg2: #111111;
+  --bg3: #1a1a1a;
+  --text: #e8e8e8;
+  --text2: #a0a0a0;
+  --text3: #707070;
+  --accent: #ff6b9d;
+  --accent2: #c44dff;
+  --accent3: #4dc9f6;
+  --accent4: #ffd54f;
+  --accent5: #69f0ae;
+  --border: #2a2a2a;
+  --card: #161616;
+  --badge-bg: rgba(255,107,157,0.1);
+  --badge-text: #ff6b9d;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Header */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: rgba(10,10,10,0.85);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+  padding: 0 2rem;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+  letter-spacing: -0.5px;
+}
+.header-logo span { color: var(--text); font-weight: 300; }
+
+.header-nav { display:flex; gap:2rem; }
+
+/* Announcement Bar */
+.announcement-bar {
+  position: fixed;
+  top: 64px;
+  left: 0;
+  right: 0;
+  background: linear-gradient(135deg, rgba(255,107,157,0.12), rgba(196,77,255,0.08));
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255,107,157,0.12);
+  text-align: center;
+  padding: 0.5rem 1rem;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--text);
+  z-index: 99;
+}
+.announcement-bar span { color: var(--accent); font-weight: 600; }
+.announcement-bar a { color: var(--text); text-decoration: underline; text-underline-offset: 3px; }
+.announcement-bar a:hover { color: var(--accent); }
+.header-nav a {
+  color: var(--text2);
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.header-nav a:hover { color: var(--accent); }
+
+/* Hero */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 6rem 2rem 4rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 50%, rgba(255,107,157,0.08) 0%, transparent 60%),
+              radial-gradient(ellipse at 20% 80%, rgba(196,77,255,0.06) 0%, transparent 50%),
+              radial-gradient(ellipse at 80% 20%, rgba(77,201,246,0.06) 0%, transparent 50%);
+  z-index: 0;
+}
+
+.hero-content { position:relative; z-index:1; max-width:800px; }
+
+.hero-badge {
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  background: var(--badge-bg);
+  color: var(--badge-text);
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  letter-spacing: 0.5px;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(3rem, 7vw, 5.5rem);
+  font-weight: 600;
+  line-height: 1.05;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(135deg, var(--accent), var(--accent2), var(--accent3));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero p {
+  font-size: 1.15rem;
+  color: var(--text2);
+  max-width: 560px;
+  margin: 0 auto 2.5rem;
+  font-weight: 300;
+  line-height: 1.7;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 0.85rem 2rem;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+  transition: all 0.25s;
+  font-family: inherit;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  color: #fff;
+}
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(255,107,157,0.3); }
+
+.btn-outline {
+  background: transparent;
+  border: 1.5px solid var(--border);
+  color: var(--text);
+}
+.btn-outline:hover { border-color: var(--accent); color: var(--accent); }
+
+/* Stats */
+.hero-stats {
+  display: flex;
+  gap: 3rem;
+  margin-top: 4rem;
+  position: relative;
+  z-index: 1;
+}
+
+.stat { text-align: center; }
+.stat-num { font-size: 2rem; font-weight: 700; color: var(--text); }
+.stat-label { font-size: 0.8rem; color: var(--text3); margin-top: 0.25rem; font-weight: 500; }
+
+/* Sections */
+.section { padding: 6rem 2rem; }
+.section-inner { max-width: 1200px; margin: 0 auto; }
+
+.section-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--accent);
+  margin-bottom: 0.75rem;
+}
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+.section-desc {
+  color: var(--text2);
+  font-size: 1.05rem;
+  max-width: 600px;
+  font-weight: 300;
+}
+
+/* Brand Story */
+.story-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.story-image {
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  border-radius: 24px;
+  aspect-ratio: 4/5;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.story-image-inner {
+  font-family: 'Playfair Display', serif;
+  font-size: 4rem;
+  color: rgba(255,255,255,0.12);
+  text-align: center;
+  line-height: 1.2;
+}
+
+.story-text h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--text);
+}
+.story-text p {
+  color: var(--text2);
+  margin-bottom: 1.25rem;
+  font-weight: 300;
+  line-height: 1.8;
+}
+
+.story-values {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.value-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1.5rem;
+  transition: border-color 0.3s;
+}
+.value-card:hover { border-color: var(--accent); }
+.value-card .icon { font-size: 1.5rem; margin-bottom: 0.5rem; }
+.value-card h4 { font-size: 0.95rem; font-weight: 600; margin-bottom: 0.25rem; }
+.value-card p { font-size: 0.8rem; color: var(--text3); margin:0; }
+
+/* Categories */
+.categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.cat-btn {
+  padding: 0.6rem 1.25rem;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  border: 1.5px solid var(--border);
+  background: transparent;
+  color: var(--text2);
+  transition: all 0.2s;
+  font-family: inherit;
+}
+.cat-btn:hover { border-color: var(--accent); color: var(--text); }
+.cat-btn.active { background: var(--accent); border-color: var(--accent); color: #fff; }
+
+/* Product Grid */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.product-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.3s;
+  cursor: pointer;
+  position: relative;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.4);
+}
+
+.product-image {
+  aspect-ratio: 1;
+  background: var(--bg2);
+  position: relative;
+  overflow: hidden;
+}
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s;
+}
+.product-card:hover .product-image img { transform: scale(1.05); }
+
+.product-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  padding: 0.35rem 0.75rem;
+  border-radius: 50px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.badge-new { background: var(--accent); color: #fff; }
+.badge-sale { background: var(--accent5); color: #000; }
+.badge-hot { background: var(--accent4); color: #000; }
+
+.product-info { padding: 1.25rem; }
+.product-type {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.4rem;
+}
+.product-name {
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.35;
+  margin-bottom: 0.75rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.product-price {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.price-current {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text);
+}
+.price-original {
+  font-size: 0.8rem;
+  color: var(--text3);
+  text-decoration: line-through;
+}
+
+.product-highlight {
+  font-size: 0.78rem;
+  color: var(--text3);
+  margin-top: 0.5rem;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Features */
+.features-bg { background: var(--bg2); }
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.feature-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 2rem;
+  text-align: center;
+  transition: border-color 0.3s;
+}
+.feature-card:hover { border-color: var(--accent); }
+.feature-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+.feature-card h4 { font-size: 1.05rem; font-weight: 600; margin-bottom: 0.5rem; }
+.feature-card p { font-size: 0.85rem; color: var(--text3); font-weight: 300; line-height: 1.6; }
+
+/* Newsletter */
+.newsletter {
+  text-align: center;
+  padding: 5rem 2rem;
+  background: linear-gradient(135deg, rgba(255,107,157,0.05), rgba(196,77,255,0.05));
+}
+
+.newsletter-form {
+  display: flex;
+  gap: 0.75rem;
+  max-width: 460px;
+  margin: 2rem auto 0;
+}
+
+.newsletter-form input {
+  flex: 1;
+  padding: 0.85rem 1.25rem;
+  border-radius: 50px;
+  border: 1.5px solid var(--border);
+  background: var(--card);
+  color: var(--text);
+  font-size: 0.9rem;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.newsletter-form input:focus { border-color: var(--accent); }
+
+/* Footer */
+.footer {
+  background: var(--bg2);
+  border-top: 1px solid var(--border);
+  padding: 4rem 2rem 2rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-brand h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  color: var(--accent);
+  margin-bottom: 0.75rem;
+}
+.footer-brand p { color: var(--text3); font-size: 0.85rem; font-weight: 300; line-height: 1.6; }
+
+.footer-col h4 {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text2);
+  margin-bottom: 1.25rem;
+}
+.footer-col a {
+  display: block;
+  color: var(--text3);
+  text-decoration: none;
+  font-size: 0.85rem;
+  margin-bottom: 0.6rem;
+  transition: color 0.2s;
+}
+.footer-col a:hover { color: var(--accent); }
+
+.footer-bottom {
+  max-width: 1200px;
+  margin: 3rem auto 0;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  color: var(--text3);
+}
+
+/* Animations */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Modal */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  z-index: 200;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+.modal-overlay.active { display: flex; }
+.modal-content {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  max-width: 800px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+}
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  background: var(--card);
+  border: 1px solid var(--border);
+  color: var(--text);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  transition: all 0.2s;
+}
+.modal-close:hover { border-color: var(--accent); color: var(--accent); }
+.modal-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.modal-image {
+  aspect-ratio: 1;
+  background: var(--bg2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 24px 0 0 24px;
+  overflow: hidden;
+}
+.modal-image img { width: 100%; height: 100%; object-fit: cover; }
+.modal-details { padding: 2.5rem; }
+.modal-type { font-size: 0.75rem; font-weight: 600; color: var(--accent); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.5rem; }
+.modal-name { font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem; line-height: 1.3; }
+.modal-price { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.5rem; }
+.modal-price .current { font-size: 1.75rem; font-weight: 700; }
+.modal-price .original { font-size: 1rem; color: var(--text3); text-decoration: line-through; }
+.modal-desc { color: var(--text2); font-size: 0.9rem; line-height: 1.7; font-weight: 300; margin-bottom: 1.5rem; }
+.modal-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.modal-tag {
+  padding: 0.35rem 0.85rem;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  background: var(--card);
+  border: 1px solid var(--border);
+  color: var(--text2);
+}
+
+@media (max-width: 768px) {
+  .header-nav { display:none; }
+  .story-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .hero-stats { gap: 1.5rem; }
+  .stat-num { font-size: 1.5rem; }
+  .product-grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 0.75rem; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .modal-grid { grid-template-columns: 1fr; }
+  .modal-image { border-radius: 24px 24px 0 0; }
+  .features-grid { grid-template-columns: 1fr; }
+  .newsletter-form { flex-direction: column; }
+}
+
+/* Loading placeholder */
+.product-image .placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--card), var(--bg2));
+}
+.placeholder span { font-size: 3rem; opacity: 0.3; }
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<header class="header">
+  <a href="#" class="header-logo">aela<span>case</span></a>
+  <nav class="header-nav">
+    <a href="#products">Products</a>
+    <a href="#story">Our Story</a>
+    <a href="#features">Features</a>
+    <a href="#shipping">Shipping</a>
+    <a href="#newsletter">Connect</a>
+  </nav>
+</header>
+
+<!-- Announcement Bar -->
+<div class="announcement-bar">
+  🚚 <span>Free shipping</span> across Germany on orders over <span>€39</span> &nbsp;|&nbsp; 🇪🇺 Europe: free over <span>€69</span> &nbsp;|&nbsp; 📦 <span>15-day pre-order</span> · <a href="#shipping">Shipping details</a>
+</div>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <div class="hero-badge">🚀 New Collection 2026</div>
+    <h1>Style Meets<br>Protection</h1>
+    <p>Premium phone cases designed for those who refuse to compromise. From kawaii charms to minimalist leather — find the case that speaks your language.</p>
+    <div class="hero-cta">
+      <a href="#products" class="btn btn-primary">Explore Collection</a>
+      <a href="#story" class="btn btn-outline">Our Story</a>
+    </div>
+  </div>
+  <div class="hero-stats">
+    <div class="stat"><div class="stat-num">33</div><div class="stat-label">Unique Designs</div></div>
+    <div class="stat"><div class="stat-num">15+</div><div class="stat-label">iPhone Models</div></div>
+    <div class="stat"><div class="stat-num">€10.99</div><div class="stat-label">Starting From</div></div>
+    <div class="stat"><div class="stat-num">15</div><div class="stat-label">Days Pre-Order</div></div>
+  </div>
+</section>
+
+<!-- Products -->
+<section class="section" id="products">
+  <div class="section-inner">
+    <div class="section-label">Collection</div>
+    <h2 class="section-title">Find Your Perfect Case</h2>
+    <p class="section-desc">Browse our complete collection of 33 unique designs. Every case is crafted with premium materials and attention to detail.</p>
+
+    <div class="categories" id="categories"></div>
+    <div class="product-grid" id="productGrid"></div>
+  </div>
+</section>
+
+<!-- Brand Story -->
+<section class="section features-bg" id="story">
+  <div class="section-inner">
+    <div class="story-grid">
+      <div class="story-image fade-in">
+        <div class="story-image-inner">aela<br>case</div>
+      </div>
+      <div class="story-text fade-in">
+        <div class="section-label">Our Story</div>
+        <h3>Born in Germany, Designed for You</h3>
+        <p>aelacase was founded with a simple belief: your phone case should be an extension of your personality. We don't just protect your device — we help you express who you are.</p>
+        <p>From the vibrant streets of Berlin to the minimalist studios of Munich, our designs draw inspiration from European aesthetics, Korean trends, and Japanese kawaii culture. Every case is carefully curated to bring you the perfect blend of style and protection.</p>
+        <div class="story-values">
+          <div class="value-card">
+            <div class="icon">🎨</div>
+            <h4>Curated Design</h4>
+            <p>33 unique styles, handpicked for every personality</p>
+          </div>
+          <div class="value-card">
+            <div class="icon">🛡️</div>
+            <h4>Full Protection</h4>
+            <p>Military-grade drop protection with raised edges</p>
+          </div>
+          <div class="value-card">
+            <div class="icon">🌱</div>
+            <h4>Eco Options</h4>
+            <p>Biodegradable wheat straw cases available</p>
+          </div>
+          <div class="value-card">
+            <div class="icon">🚚</div>
+            <h4>Smart Shipping</h4>
+            <p>Free delivery in Germany from €39, EU from €69</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Features -->
+<section class="section features-bg" id="features" style="padding-top:0;">
+  <div class="section-inner">
+    <div class="section-label">Why aelacase</div>
+    <h2 class="section-title">Protection That Performs</h2>
+    <p class="section-desc">Every case is engineered with premium materials and thoughtful details.</p>
+    <div class="features-grid">
+      <div class="feature-card fade-in">
+        <div class="feature-icon">🔮</div>
+        <h4>IMD Technology</h4>
+        <p>In-Mold Decoration embeds patterns inside the case — they never fade, scratch, or peel.</p>
+      </div>
+      <div class="feature-card fade-in">
+        <div class="feature-icon">🧲</div>
+        <h4>MagSafe Compatible</h4>
+        <p>Built-in magnetic rings for seamless wireless charging and accessory attachment.</p>
+      </div>
+      <div class="feature-card fade-in">
+        <div class="feature-icon">💧</div>
+        <h4>Anti-Yellowing</h4>
+        <p>Advanced UV-resistant coating keeps transparent cases crystal clear for years.</p>
+      </div>
+      <div class="feature-card fade-in">
+        <div class="feature-icon">🎯</div>
+        <h4>Precision Fit</h4>
+        <p>Model-specific molds ensure perfect cutouts and button responsiveness.</p>
+      </div>
+      <div class="feature-card fade-in">
+        <div class="feature-icon">✋</div>
+        <h4>Skin-Feel Texture</h4>
+        <p>Silky-smooth coating that's fingerprint-resistant and incredibly comfortable to hold.</p>
+      </div>
+      <div class="feature-card fade-in">
+        <div class="feature-icon">📦</div>
+        <h4>15-Day Pre-Order</h4>
+        <p>All products are made to order with love. Your case ships within 15 working days of order confirmation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Shipping Policy -->
+<section class="section" id="shipping">
+  <div class="section-inner">
+    <div class="section-label">Shipping & Delivery</div>
+    <h2 class="section-title">Shipping That Works<br>for You</h2>
+    <p class="section-desc">Transparent rates, no surprises. We ship worldwide with clear pricing for every region.</p>
+
+    <div class="features-grid" style="margin-top:3rem;">
+      <div class="feature-card fade-in" style="border-color:rgba(255,107,157,0.3);">
+        <div class="feature-icon">🇩🇪</div>
+        <h4>Germany</h4>
+        <div style="margin-top:0.75rem;">
+          <p style="color:var(--accent5);font-weight:600;font-size:0.95rem;margin-bottom:0.25rem;">Free over €39</p>
+          <p style="color:var(--text3);font-size:0.85rem;">Standard: <strong style="color:var(--text2);">€5.99</strong></p>
+          <p style="color:var(--text3);font-size:0.8rem;margin-top:0.5rem;">Delivery within 3–6 working days<br>after pre-order processing</p>
+        </div>
+      </div>
+      <div class="feature-card fade-in" style="border-color:rgba(77,201,246,0.3);">
+        <div class="feature-icon">🇪🇺</div>
+        <h4>Europe</h4>
+        <div style="margin-top:0.75rem;">
+          <p style="color:var(--accent3);font-weight:600;font-size:0.95rem;margin-bottom:0.25rem;">Free over €69</p>
+          <p style="color:var(--text3);font-size:0.85rem;">Standard: <strong style="color:var(--text2);">€9.99</strong></p>
+          <p style="color:var(--text3);font-size:0.8rem;margin-top:0.5rem;">Delivery within 5–10 working days<br>after pre-order processing</p>
+        </div>
+      </div>
+      <div class="feature-card fade-in" style="border-color:rgba(196,77,255,0.3);">
+        <div class="feature-icon">🌍</div>
+        <h4>Rest of World</h4>
+        <div style="margin-top:0.75rem;">
+          <p style="color:var(--text3);font-size:0.85rem;">Flat rate: <strong style="color:var(--text2);">€13.99</strong></p>
+          <p style="color:var(--text3);font-size:0.8rem;margin-top:0.5rem;">Delivery within 7–20 working days<br>after pre-order processing</p>
+        </div>
+      </div>
+    </div>
+
+    <div style="background:var(--card);border:1px solid var(--border);border-radius:20px;padding:2rem;margin-top:2.5rem;text-align:center;">
+      <div style="font-size:2rem;margin-bottom:0.75rem;">⏳</div>
+      <h4 style="font-size:1.1rem;font-weight:600;margin-bottom:0.5rem;">15-Day Pre-Order Policy</h4>
+      <p style="color:var(--text2);font-size:0.9rem;font-weight:300;max-width:560px;margin:0 auto;line-height:1.7;">
+        Every aelacase is <strong style="color:var(--accent);">made to order</strong> with meticulous attention to detail. 
+        After placing your order, please allow <strong style="color:var(--text);">up to 15 working days</strong> for production. 
+        You'll receive a shipping confirmation with tracking as soon as your case leaves our studio.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Newsletter -->
+<section class="newsletter" id="newsletter">
+  <div class="section-label">Stay Connected</div>
+  <h2 class="section-title">Get Early Access</h2>
+  <p class="section-desc" style="margin: 0 auto;">Be the first to know about new designs, exclusive discounts, and style inspiration.</p>
+  <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thanks for subscribing! 🎉');">
+    <input type="email" placeholder="Your email address" required>
+    <button type="submit" class="btn btn-primary">Subscribe</button>
+  </form>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <h3>aelacase</h3>
+      <p>Premium phone cases designed in Germany. Style meets protection — since 2026.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Shop</h4>
+      <a href="#products">All Cases</a>
+      <a href="#products">New Arrivals</a>
+      <a href="#products">Best Sellers</a>
+      <a href="#products">Sale</a>
+    </div>
+    <div class="footer-col">
+      <h4>About</h4>
+      <a href="#story">Our Story</a>
+      <a href="#features">Materials</a>
+      <a href="#">Sustainability</a>
+      <a href="#">Contact</a>
+    </div>
+    <div class="footer-col">
+      <h4>Support</h4>
+      <a href="#shipping">Shipping Info</a>
+      <a href="#">Returns</a>
+      <a href="#">FAQ</a>
+      <a href="#">Privacy Policy</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2026 aelacase. All rights reserved.</span>
+    <span>Made with ❤️ in Germany</span>
+  </div>
+</footer>
+
+<!-- Product Modal -->
+<div class="modal-overlay" id="modal">
+  <div class="modal-content">
+    <button class="modal-close" onclick="closeModal()">&times;</button>
+    <div class="modal-grid" id="modalInner"></div>
+  </div>
+</div>
+
+<script>
+// ===== PRODUCT DATA =====
+const products = [
+  {"title":"Green Heart Chain Silicone Phone Case for iPhone 13-17","type":"Silicone Case","category":"everyday","price":"1.44","compare_price":"1.87","image":"https://cbu01.alicdn.com/img/ibank/O1CN01Cz0Tdc1Q227r8tvp1_!!2216249961917-0-cib.jpg","tags":"silicone,heart chain,green,couple case,protective,women,Korean style","highlight":"Premium silicone material — with a soft-touch finish","short_desc":"Elevate your iPhone with our Green Heart Chain Silicone Case — a perfect blend of style and protection. Designed for those who love a pop of color, this case features a charming heart-shaped"},
+  {"title":"Starry Night Stand Phone Case with Holographic Finish","type":"Stand Case","category":"functional","price":"2.01","compare_price":"2.61","image":"https://cbu01.alicdn.com/img/ibank/O1CN01qZkc5k1Q22D5iXbel_!!2216249961917-0-cib.jpg","tags":"stand case,holographic,starry,gradient,premium,protective,kickstand","highlight":"Built-in kickstand — for hands-free viewing in portrait and landscape","short_desc":"Transform your iPhone into a piece of art with our Starry Night Stand Case. Featuring a mesmerizing tie-dye star pattern with holographic and laser-etched details."},
+  {"title":"Floral Line Art Bracelet Clear Silicone Phone Case","type":"Clear Case","category":"everyday","price":"1.44","compare_price":"1.87","image":"https://cbu01.alicdn.com/img/ibank/O1CN01zpEPca1Q22BE6Ziq5_!!2216249961917-0-cib.jpg","tags":"transparent,floral,bracelet chain,clear case,silicone,minimalist,women","highlight":"Transparent silicone body — showcasing your phone's original design","short_desc":"Add a touch of elegance to your iPhone with our Floral Line Art Bracelet Case. The delicate flower line art paired with a chain bracelet creates a sophisticated aesthetic."},
+  {"title":"Magnetic Double-Layer IMD Transparent Phone Case","type":"Magnetic Case","category":"premium","price":"3.36","compare_price":"4.37","image":"https://cbu01.alicdn.com/img/ibank/O1CN010HZB4K1hTNL6dzMRh_!!2215458174278-0-cib.jpg","tags":"IMD,magnetic,magsafe,double layer,transparent,premium,anti-yellow","highlight":"IMD printing technology — for vivid, long-lasting colors that never fade","short_desc":"Experience next-level protection with our Magnetic Double-Layer IMD Case. This premium case combines innovative IMD (In-Mold Decoration) technology with a magnetic double-layer design."},
+  {"title":"Cute Cartoon AirPods Case Cover for AirPods 1/2/3 & Pro","type":"AirPods Case","category":"accessories","price":"4.02","compare_price":"5.23","image":"https://cbu01.alicdn.com/img/ibank/O1CN01DDPm9F1hTNFLnJp59_!!2215458174278-0-cib.jpg","tags":"airpods case,cartoon,cute,silicone,keychain,protective,accessory","highlight":"Full compatibility — with AirPods 1, 2, 3, and Pro","short_desc":"Give your AirPods the personality they deserve with our Cute Cartoon AirPods Case. Featuring an adorable cartoon design, this case is the perfect companion for your wireless earbuds."},
+  {"title":"Embroidered Puppy Chain Electroplated View Window Case","type":"Decorative Case","category":"kawaii","price":"2.67","compare_price":"3.47","image":"https://cbu01.alicdn.com/img/ibank/O1CN01GNpamY1Q22KpWi28e_!!2216249961917-0-cib.jpg","tags":"embroidered,puppy,chain,electroplated,view window,silicone,premium,cute","highlight":"Hand-crafted embroidery — featuring an adorable puppy motif","short_desc":"Stand out from the crowd with our Embroidered Puppy Chain Case. This unique case combines delicate embroidery work with an electroplated view window for a look that's both cute and luxurious."},
+  {"title":"Matte Frosted Premium Phone Case for iPhone 11-17","type":"Matte Case","category":"minimalist","price":"1.44","compare_price":"1.87","image":"https://cbu01.alicdn.com/img/ibank/O1CN01aHRvR41TPLHzbUm0D_!!2219174882374-0-cib.jpg","tags":"matte,frosted,premium,thin,fingerprint resistant,business,minimalist","highlight":"Matte frosted texture — that's fingerprint-resistant and silky smooth","short_desc":"Discover the perfect balance of elegance and protection with our Matte Frosted Premium Case. The sophisticated frosted finish provides a luxurious feel while offering superior grip."},
+  {"title":"Plush Pony Lanyard Sheepskin Silicone Phone Case","type":"Decorative Case","category":"kawaii","price":"2.42","compare_price":"3.15","image":"https://cbu01.alicdn.com/img/ibank/O1CN01kqoUkB1Q22MhNaMNx_!!2216249961917-0-cib.jpg","tags":"plush,pony,lanyard,sheepskin,silicone,cute,gift,holiday,women","highlight":"Plush pony charm — soft, huggable, and oh-so-cute","short_desc":"Add a touch of whimsy to your iPhone with our Plush Pony Lanyard Case. Featuring an adorable plush pony charm and a convenient lanyard, this case is perfect for those who love cute, functional accessories."},
+  {"title":"Vintage Floral Bookshelf Design Phone Case","type":"Designer Case","category":"artistic","price":"0.92","compare_price":"1.20","image":"https://cbu01.alicdn.com/img/ibank/O1CN01AESXMX1kjM3vEKxZo_!!2217699674719-0-cib.jpg","tags":"vintage,floral,bookshelf,retro,TPU,slim,artistic,unique","highlight":"Vintage bookshelf illustration — with intricate floral details","short_desc":"Carry a piece of art in your pocket with our Vintage Floral Bookshelf Case. This unique design features a whimsical bookshelf pattern adorned with retro flowers, perfect for book lovers."},
+  {"title":"Skin-Feel Anti-Drop Comic Phone Case","type":"Protective Case","category":"functional","price":"0.90","compare_price":"1.17","image":"https://cbu01.alicdn.com/img/ibank/O1CN016Hh0QM1kjLydn38uG_!!2217699674719-0-cib.jpg","tags":"skin feel,anti drop,comic,protective,unisex,anti fingerprint,TPU","highlight":"Skin-feel coating — silky smooth, like touching bare skin","short_desc":"Protect your iPhone in style with our Skin-Feel Anti-Drop Comic Case. The unique skin-like texture provides an incredibly comfortable grip, while the playful comic design adds personality."},
+  {"title":"3D Cartoon M-Bean Bracelet Electroplated Phone Case","type":"Decorative Case","category":"kawaii","price":"2.83","compare_price":"3.68","image":"https://cbu01.alicdn.com/img/ibank/O1CN01jNhFeZ1Q22Id3Tkf7_!!2216249961917-0-cib.jpg","tags":"3D,cartoon,M bean,bracelet,electroplated,silicone,cute,kawaii","highlight":"3D M-bean charm — with vivid colors and fine details","short_desc":"Make your iPhone irresistibly cute with our 3D Cartoon M-Bean Bracelet Case. The playful 3D M-bean charm paired with a decorative bracelet chain creates a look that's both adorable and stylish."},
+  {"title":"All-Over Bowknot Pattern Clear TPU Phone Case","type":"Clear Case","category":"everyday","price":"0.90","compare_price":"1.17","image":"https://cbu01.alicdn.com/img/ibank/O1CN01ISKAaa1kjM17ydxFU_!!2217699674719-0-cib.jpg","tags":"bowknot,clear,TPU,transparent,cute,bow pattern,lightweight,anti-yellow","highlight":"All-over bowknot print — for a sweet, coordinated look","short_desc":"Embrace your feminine side with our All-Over Bowknot Clear Case. The entire case is adorned with cute bowknot patterns, creating a sweet and charming look that's perfect for any occasion."},
+  {"title":"Oil Painting Floral Lanyard Silicone Phone Case","type":"Designer Case","category":"artistic","price":"2.42","compare_price":"3.15","image":"https://cbu01.alicdn.com/img/ibank/O1CN01GSbVch1m3L0h3qljp_!!2217488784898-0-cib.jpg","tags":"oil painting,floral,lanyard,silicone,maillard,view window,artistic,warm","highlight":"Oil painting floral pattern — in warm Maillard tones","short_desc":"Turn your iPhone into a wearable work of art with our Oil Painting Floral Lanyard Case. The Maillard-toned oil painting floral design exudes warmth and sophistication."},
+  {"title":"Dessert Puppy Cartoon Soft Phone Case","type":"Designer Case","category":"artistic","price":"0.94","compare_price":"1.22","image":"https://cbu01.alicdn.com/img/ibank/O1CN01f6dDMv1u5dpu6riNh_!!2217141245986-0-cib.jpg","tags":"cartoon,puppy,dessert,cute,soft TPU,slim,protective,gift","highlight":"Cute dessert puppy illustration — with vivid colors","short_desc":"Bring joy to your everyday life with our Dessert Puppy Cartoon Case. Featuring an adorable puppy surrounded by sweet desserts, this case is guaranteed to make you smile every time."},
+  {"title":"Western Dachshund Chain Electroplated View Window Case","type":"Decorative Case","category":"kawaii","price":"2.26","compare_price":"2.94","image":"https://cbu01.alicdn.com/img/ibank/O1CN01JWFP9b1m3KuhOsd6R_!!2217488784898-0-cib.jpg","tags":"dachshund,western,cowboy,chain,electroplated,view window,stand,cute","highlight":"Western-style dachshund illustration — quirky and charming","short_desc":"Saddle up with our Western Dachshund Chain Case. This playful design features an adorable dachshund in American cowboy style, complete with a decorative chain and electroplated view window."},
+  {"title":"Silver Foil Glitter Double-Sided IMD Phone Case","type":"Designer Case","category":"artistic","price":"1.15","compare_price":"1.49","image":"https://cbu01.alicdn.com/img/ibank/O1CN017x0r041TPLK4z7Uf8_!!2219174882374-0-cib.jpg","tags":"silver foil,glitter,IMD,double sided,transparent,sparkle,minimalist,shiny","highlight":"Double-sided silver foil glitter — that shimmers brilliantly","short_desc":"Sparkle and shine with our Silver Foil Glitter IMD Case. The double-sided glitter design catches the light from every angle, making your iPhone truly dazzling."},
+  {"title":"Camellia Flower Full-Body Silicone Phone Case","type":"Floral Case","category":"elegant","price":"1.85","compare_price":"2.41","image":"https://cbu01.alicdn.com/img/ibank/O1CN0108udaa1u5doAYPwEg_!!2217141245986-0-cib.jpg","tags":"camellia,flower,silicone,full body,soft,protective,elegant,classic","highlight":"3D camellia flower design — with lifelike petals","short_desc":"Embrace timeless elegance with our Camellia Flower Silicone Case. The delicate camellia design adds a touch of natural beauty to your iPhone, while the soft silicone body provides reliable protection."},
+  {"title":"Bold Leopard Print Soft Phone Case","type":"Fashion Case","category":"trendy","price":"1.60","compare_price":"2.08","image":"https://cbu01.alicdn.com/img/ibank/O1CN01qg2CS61Bs2xmnSNIX_!!0-0-cib.jpg","tags":"leopard print,bold,black,fashion,soft TPU,slim,edgy,trendy","highlight":"Bold black leopard print — edgy and fashionable","short_desc":"Make a fierce statement with our Bold Leopard Print Case. The striking black leopard pattern exudes confidence and style, perfect for those who aren't afraid to stand out."},
+  {"title":"Minimalist Frame Leather Texture Business Phone Case","type":"Business Case","category":"minimalist","price":"0.78","compare_price":"1.01","image":"https://cbu01.alicdn.com/img/ibank/O1CN01oeyCc51TPLN6bKifo_!!2219174882374-0-cib.jpg","tags":"minimalist,leather texture,business,frame,anti drop,thin,fingerprint resistant,professional","highlight":"Leather texture finish — looks and feels like genuine leather","short_desc":"Elevate your professional image with our Minimalist Frame Leather Texture Case. The sophisticated leather-grain finish and clean frame design make this the perfect case for business professionals."},
+  {"title":"Eco-Friendly Wheat Straw Biodegradable Phone Case","type":"Eco Case","category":"eco","price":"0.62","compare_price":"0.81","image":"https://cbu01.alicdn.com/img/ibank/O1CN011fTihZ1OYQvLZ3Paw_!!2216544931717-0-cib.jpg","tags":"eco friendly,wheat straw,biodegradable,natural,minimalist,sustainable,green,lightweight","highlight":"100% natural wheat straw material — biodegradable and compostable","short_desc":"Protect your phone and the planet with our Eco-Friendly Wheat Straw Case. Made from natural wheat straw fibers, this biodegradable case is the perfect choice for environmentally conscious consumers."},
+  {"title":"Pink Floral Pattern Soft Cartoon Phone Case","type":"Floral Case","category":"elegant","price":"0.94","compare_price":"1.22","image":"https://cbu01.alicdn.com/img/ibank/O1CN01aOAgxl1u5dqZKOSY4_!!2217141245986-0-cib.jpg","tags":"pink,floral,cartoon,soft TPU,lightweight,sweet,pastel,spring","highlight":"Charming pink floral print — with dainty scattered flowers","short_desc":"Add a splash of sweetness to your iPhone with our Pink Floral Pattern Case. The delicate pink floral design on a soft pastel background creates a dreamy, romantic aesthetic."},
+  {"title":"Superhero Character Anti-Fingerprint Phone Case","type":"Designer Case","category":"artistic","price":"0.94","compare_price":"1.22","image":"https://cbu01.alicdn.com/img/ibank/O1CN01mici1m1u5dnfXlhCi_!!2217141245986-0-cib.jpg","tags":"superhero,character,anti fingerprint,full body,TPU,cartoon,fun,universal","highlight":"Fun superhero character print — bold and vibrant","short_desc":"Unleash your inner hero with our Superhero Character Anti-Fingerprint Case. Featuring a bold superhero design, this case combines fun aesthetics with practical everyday protection."},
+  {"title":"Ultra-Thin Skin-Feel Half-Wrap Silicone Phone Case","type":"Slim Case","category":"minimalist","price":"0.70","compare_price":"0.91","image":"https://cbu01.alicdn.com/img/ibank/O1CN015w2uf31PZdgeO06BS_!!2214668471855-0-cib.jpg","tags":"ultra thin,skin feel,half wrap,silicone,anti fingerprint,minimalist,lightweight,anti drop","highlight":"Ultra-thin profile — only 0.8mm thick","short_desc":"Experience the barely-there feel with our Ultra-Thin Skin-Feel Half-Wrap Case. The innovative skin-feel coating and ultra-slim design make this case feel like a second skin on your iPhone."},
+  {"title":"Korean Style Silver Bow Frame Phone Case","type":"Fashion Case","category":"trendy","price":"1.56","compare_price":"2.03","image":"https://cbu01.alicdn.com/img/ibank/O1CN01mWgHIO1u5dp0orah4_!!2217141245986-0-cib.jpg","tags":"Korean style,silver frame,bowknot,elegant,feminine,trendy,Instagram,premium","highlight":"Silver metallic frame — for a premium, jewelry-like finish","short_desc":"Channel K-fashion vibes with our Korean Style Silver Bow Frame Case. The elegant silver-edged frame paired with a delicate bowknot creates a look that's straight out of a Korean drama."},
+  {"title":"Dreamy Butterfly Premium Phone Case","type":"Designer Case","category":"artistic","price":"1.85","compare_price":"2.41","image":"https://cbu01.alicdn.com/img/ibank/O1CN014xtkfk1u5doYGAhlT_!!2217141245986-0-cib.jpg","tags":"butterfly,dreamy,premium,Japanese Korean,iridescent,feminine,elegant,gift","highlight":"Dreamy butterfly illustration — with iridescent details","short_desc":"Let your imagination take flight with our Dreamy Butterfly Premium Case. The ethereal butterfly design creates a magical, dreamy aesthetic that's perfect for romantic souls."},
+  {"title":"Sweet Strawberry Pattern Soft Phone Case","type":"Designer Case","category":"artistic","price":"2.63","compare_price":"3.42","image":"https://cbu01.alicdn.com/img/ibank/O1CN011uc73H1u5dpPZ2yJc_!!2217141245986-0-cib.jpg","tags":"strawberry,sweet,cute,soft TPU,lightweight,summer,fruit,kawaii","highlight":"Adorable strawberry pattern — sweet and summery","short_desc":"Sweeten up your iPhone with our Sweet Strawberry Pattern Case. The adorable strawberry design brings a fresh, summery vibe to your device, perfect for fruit lovers and cute-style enthusiasts."},
+  {"title":"Tie-Dye Floral Chain Korean Style Phone Case","type":"Designer Case","category":"artistic","price":"2.26","compare_price":"2.94","image":"https://cbu01.alicdn.com/img/ibank/O1CN01QRLmv21m3L3lzqpyv_!!2217488784898-0-cib.jpg","tags":"tie dye,floral,chain,Korean style,summer,silicone,fresh,trendy","highlight":"Tie-dye floral pattern — each case has a unique look","short_desc":"Stay on-trend with our Tie-Dye Floral Chain Case. The artistic tie-dye floral pattern combined with a decorative chain creates a fresh, Korean-inspired look that's perfect for summer."},
+  {"title":"Lily of the Valley Bracelet Chain Phone Case","type":"Floral Case","category":"elegant","price":"2.42","compare_price":"3.15","image":"https://cbu01.alicdn.com/img/ibank/O1CN01VpQ9Xg1m3L3XjCeCb_!!2217488784898-0-cib.jpg","tags":"lily of the valley,bracelet,chain,elegant,women,silicone,floral,gift","highlight":"Lily of the Valley motif — symbol of happiness and sweetness","short_desc":"Carry a symbol of happiness with our Lily of the Valley Bracelet Case. The delicate lily of the valley design paired with a decorative bracelet chain creates a look of pure elegance."},
+  {"title":"Matte Metallic Magnetic Slim PC Phone Case","type":"Magnetic Case","category":"premium","price":"2.26","compare_price":"2.94","image":"https://cbu01.alicdn.com/img/ibank/O1CN01KdzPc61TlmnDGuhQd_!!2215811302423-0-cib.jpg","tags":"matte,metallic,magnetic,magsafe,ultra thin,PC,slim,premium","highlight":"Built-in magnetic ring — fully MagSafe compatible","short_desc":"Experience premium protection with a minimalist aesthetic in our Matte Metallic Magnetic Case. The ultra-thin PC shell with metallic paint finish delivers both style and MagSafe compatibility."},
+  {"title":"Tulip Mirror Stand Shell Texture Phone Case","type":"Stand Case","category":"functional","price":"3.49","compare_price":"4.54","image":"https://cbu01.alicdn.com/img/ibank/O1CN01GBfawp1m3Kzy4Kd1b_!!2217488784898-0-cib.jpg","tags":"tulip,mirror,stand,shell texture,silicone,premium,elegant,women,functional","highlight":"Built-in mirror — perfect for makeup touch-ups anywhere","short_desc":"Beauty and function unite in our Tulip Mirror Stand Case. Featuring a built-in mirror and kickstand, this case is the ultimate accessory for on-the-go touch-ups and media viewing."},
+  {"title":"Blue Gradient 3D Planet Foil Texture Phone Case","type":"Designer Case","category":"artistic","price":"3.08","compare_price":"4.00","image":"https://cbu01.alicdn.com/img/ibank/O1CN01yxK8TK1m3KwgIxrYe_!!2217488784898-0-cib.jpg","tags":"blue gradient,3D planet,foil texture,cosmic,premium,anti drop,camera protection,unique","highlight":"3D planet design — with depth and dimension","short_desc":"Carry the universe in your pocket with our Blue Gradient 3D Planet Case. The stunning blue gradient with 3D planet details and foil texture creates a cosmic masterpiece on your iPhone."},
+  {"title":"Honeycomb Cooling Magnetic Anti-Drop Phone Case","type":"Magnetic Case","category":"premium","price":"3.69","compare_price":"4.80","image":"https://cbu01.alicdn.com/img/ibank/O1CN01e7gYt21Tlmnlwx2qa_!!2215811302423-0-cib.jpg","tags":"honeycomb,cooling,magnetic,magsafe,anti drop,ventilation,gaming,protective","highlight":"Honeycomb ventilation design — dissipates heat for better performance","short_desc":"Keep your iPhone cool and protected with our Honeycomb Cooling Magnetic Case. The innovative honeycomb ventilation design combined with MagSafe compatibility makes this the ultimate performance case."},
+  {"title":"Luxury Electroplated Silver Phone Case","type":"Luxury Case","category":"premium","price":"1.07","compare_price":"1.39","image":"https://cbu01.alicdn.com/img/ibank/O1CN016S4VNp1u5dtwLW6Rj_!!2217141245986-0-cib.jpg","tags":"luxury,electroplated,silver,mirror,premium,slim,full body,elegant","highlight":"Electroplated silver finish — mirror-like shine and scratch resistance","short_desc":"Add a touch of luxury to your iPhone with our Luxury Electroplated Silver Case. The premium electroplated silver finish creates a mirror-like shine that's both sophisticated and eye-catching."}
+];
+
+// ===== CATEGORY DEFINITIONS =====
+const categories = [
+  { id: 'all', label: 'All', icon: '📱' },
+  { id: 'everyday', label: 'Everyday', icon: '💫' },
+  { id: 'kawaii', label: 'Kawaii', icon: '🌸' },
+  { id: 'artistic', label: 'Artistic', icon: '🎨' },
+  { id: 'elegant', label: 'Elegant', icon: '🌿' },
+  { id: 'premium', label: 'Premium', icon: '✨' },
+  { id: 'minimalist', label: 'Minimalist', icon: '🪨' },
+  { id: 'functional', label: 'Functional', icon: '⚡' },
+  { id: 'trendy', label: 'Trendy', icon: '🔥' },
+  { id: 'accessories', label: 'Accessories', icon: '🎧' },
+  { id: 'eco', label: 'Eco', icon: '🌱' }
+];
+
+// ===== RENDER CATEGORIES =====
+function renderCategories() {
+  const container = document.getElementById('categories');
+  container.innerHTML = categories.map(cat =>
+    `<button class="cat-btn${cat.id === 'all' ? ' active' : ''}" data-cat="${cat.id}">${cat.icon} ${cat.label}</button>`
+  ).join('');
+
+  container.querySelectorAll('.cat-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      container.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      renderProducts(btn.dataset.cat);
+    });
+  });
+}
+
+// ===== RENDER PRODUCTS =====
+function renderProducts(categoryFilter = 'all') {
+  const grid = document.getElementById('productGrid');
+  const filtered = categoryFilter === 'all'
+    ? products
+    : products.filter(p => p.category === categoryFilter);
+
+  grid.innerHTML = filtered.map((p, i) => {
+    const discount = p.compare_price > p.price
+      ? Math.round((1 - parseFloat(p.price) / parseFloat(p.compare_price)) * 100)
+      : 0;
+
+    let badge = '';
+    if (i < 6) badge = '<div class="product-badge badge-new">New</div>';
+    else if (discount >= 20) badge = `<div class="product-badge badge-sale">-${discount}%</div>`;
+
+    return `
+    <div class="product-card fade-in" onclick="openProduct(${products.indexOf(p)})">
+      ${badge}
+      <div class="product-image">
+        <img src="${p.image}" alt="${p.title}" loading="lazy" onerror="this.parentElement.innerHTML='<div class=\\'placeholder\\'><span>📱</span></div>'">
+      </div>
+      <div class="product-info">
+        <div class="product-type">${p.type}</div>
+        <div class="product-name">${p.title}</div>
+        <div class="product-price">
+          <span class="price-current">€${p.price}</span>
+          ${discount > 0 ? `<span class="price-original">€${p.compare_price}</span>` : ''}
+        </div>
+        <div class="product-highlight">${p.highlight}</div>
+      </div>
+    </div>`;
+  }).join('');
+
+  // Trigger fade-in animations
+  setTimeout(() => {
+    document.querySelectorAll('.fade-in').forEach(el => el.classList.add('visible'));
+  }, 50);
+}
+
+// ===== MODAL =====
+function openProduct(index) {
+  const p = products[index];
+  const discount = p.compare_price > p.price
+    ? Math.round((1 - parseFloat(p.price) / parseFloat(p.compare_price)) * 100)
+    : 0;
+  const tags = p.tags.split(',').map(t => t.trim());
+
+  document.getElementById('modalInner').innerHTML = `
+    <div class="modal-image">
+      <img src="${p.image}" alt="${p.title}" onerror="this.innerHTML='<div class=\\'placeholder\\'><span>📱</span></div>'">
+    </div>
+    <div class="modal-details">
+      <div class="modal-type">${p.type}</div>
+      <h3 class="modal-name">${p.title}</h3>
+      <div class="modal-price">
+        <span class="current">€${p.price}</span>
+        ${discount > 0 ? `<span class="original">€${p.compare_price}</span><span style="background:var(--accent);color:#fff;padding:0.2rem 0.6rem;border-radius:50px;font-size:0.75rem;">-${discount}%</span>` : ''}
+      </div>
+      <p class="modal-desc">${p.short_desc}</p>
+      <div class="modal-tags">${tags.map(t => `<span class="modal-tag">${t}</span>`).join('')}</div>
+    </div>
+  `;
+  document.getElementById('modal').classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+  document.getElementById('modal').classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+document.getElementById('modal').addEventListener('click', function(e) {
+  if (e.target === this) closeModal();
+});
+
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeModal();
+});
+
+// ===== SCROLL ANIMATIONS =====
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+// ===== INIT =====
+renderCategories();
+renderProducts();
+
+// Observe additional fade-in elements
+setTimeout(() => {
+  document.querySelectorAll('.feature-card, .story-image, .story-text').forEach(el => {
+    el.classList.add('fade-in');
+    observer.observe(el);
+  });
+  // Trigger first batch
+  document.querySelectorAll('.fade-in').forEach(el => el.classList.add('visible'));
+}, 100);
+</script>
+</body>
+</html>
